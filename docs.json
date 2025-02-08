@@ -20,7 +20,8 @@
               "using",
               "useragent",
               "attach",
-              "execute"
+              "execute",
+              "KillRoblox"
             ]
           }
         ]
