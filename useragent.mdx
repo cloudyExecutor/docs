@@ -1,0 +1,63 @@
+---
+title: "User Agent"
+description: "set the user agent for your executor"
+---
+
+<Info>
+  Whether you're using WPF or WinForms, this step will be different.
+</Info>
+
+
+
+## WinForms
+
+In WinForms, you'll need to set the user agent definition in the `Form1_Load` event.
+
+```csharp
+public Form1()
+{
+    InitializeComponent();
+    Api.UserAgent(string executorname, int version);
+}
+```
+
+here is a sample usage:
+
+```csharp
+public Form1()
+{
+    InitializeComponent();
+    Api.UserAgent("your-executor-name", 1);
+}
+```
+
+Replace "your-executor-name" with the actual name of your executor. The "1" represents the version of your executor.
+
+
+
+## WPF
+
+<Warning>
+  in WPF, it's a little bit different; it needs to be set to `YOURWINDOWNAME()`.
+</Warning>
+
+```csharp
+public YOURWINDOWNAME()
+{
+    InitializeComponent();
+    Api.UserAgent(string executorname, int version)
+}
+```
+
+Here is a sample usage:
+
+```csharp
+public MainWindow()
+{
+    InitializeComponent();
+    Api.UserAgent("your-executor-name", 1)
+}
+
+```
+
+Replace "your-executor-name" with the actual name of your executor. The "1" represents the version of your executor.
