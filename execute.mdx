@@ -1,0 +1,36 @@
+---
+title: "Execute"
+description: "Execute scripts with cxapi"
+---
+
+<Check>
+  As soon as you are injected, youll be able to directly execute scripts in the Roblox lua environment
+</Check>
+
+## Execute
+
+Put this code in your `Execute_Click()` event.
+
+```csharp
+private async void execute_Click(object sender, RoutedEventArgs e)
+{
+    Api.Execute("print('Hello, World')");
+}
+```
+
+Replace `print('Hello, World')` with the actual Lua code.
+
+<Info>
+  Usually, people want their executor to run custom scripts, not pre-set ones, but rather text from an editor. Here is an example for richTextBox1
+</Info>
+
+```csharp
+private async void execute_Click(object sender, RoutedEventArgs e)
+{
+    Api.Execute(richTextBox1.Text);
+}
+```
+
+<Check>
+  this code will use the content of the richTextBox1&#x20;
+</Check>
