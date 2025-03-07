@@ -14,7 +14,7 @@ Put this code in your `Execute_Click()` event.
 ```csharp
 private async void execute_Click(object sender, RoutedEventArgs e)
 {
-    Api.Execute("print('Hello, World')");
+    Api.execute("print('Hello, World')");
 }
 ```
 
@@ -27,7 +27,7 @@ Replace `print('Hello, World')` with the actual Lua code.
 ```csharp
 private async void execute_Click(object sender, RoutedEventArgs e)
 {
-    Api.Execute(richTextBox1.Text);
+    Api.execute(richTextBox1.Text);
 }
 ```
 
